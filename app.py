@@ -25,7 +25,9 @@ with col1:
 ### Student Details
 
 **Name:** Gundupalli Tejaswi Reddy
+
 **Registration Number:** 2023BCSE07AED299 
+
 **Class:** CSE AIML C
 
 **Project Title:** Spotify Music Clustering using Machine Learning
