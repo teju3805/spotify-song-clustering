@@ -1,6 +1,27 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2868
-\cocoatextscaling0\cocoaplatform0{\fonttbl}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww29200\viewh18460\viewkind0
-}
+import streamlit as st
+import numpy as np
+import pickle
+
+# Load model and scaler
+model = pickle.load(open("spotify_kmeans_model.pkl", "rb"))
+scaler = pickle.load(open("scaler.pkl", "rb"))
+
+st.title("Spotify Song Cluster Predictor 🎵")
+
+st.write("Enter song audio features to predict cluster.")
+
+danceability = st.slider("Danceability", 0.0, 1.0, 0.5)
+energy = st.slider("Energy", 0.0, 1.0, 0.5)
+loudness = st.slider("Loudness", -60.0, 0.0, -10.0)
+tempo = st.slider("Tempo", 50.0, 200.0, 120.0)
+valence = st.slider("Valence", 0.0, 1.0, 0.5)
+
+if st.button("Predict Cluster"):
+
+    features = np.array([[danceability, energy, loudness, tempo, valence]])
+
+    scaled = scaler.transform(features)
+
+    prediction = model.predict(scaled)
+
+    st.success(f"Predicted Cluster: {prediction[0]}")
