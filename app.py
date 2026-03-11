@@ -24,14 +24,14 @@ with col1:
     st.markdown("""
 ### Student Details
 
-**Name:** Your Name  
-**Registration Number:** Your Registration Number  
-**Class:** Your Class  
+**Name:** Gundupalli Tejaswi Reddy
+**Registration Number:** 2023BCSE07AED299 
+**Class:** CSE AIML C
 
 **Project Title:** Spotify Music Clustering using Machine Learning
 
 🔗 **Google Colab Notebook:**  
-https://colab.research.google.com/your-colab-link
+https://colab.research.google.com/drive/1A6lI1Rr_Q0f-q2098WAr-m3FX2LwRnqt?usp=sharing
 """)
 
 with col2:
@@ -41,7 +41,7 @@ st.divider()
 
 # ================= PROJECT OVERVIEW =================
 
-st.header("📘 Project Overview")
+st.header(" Project Overview")
 
 st.write("""
 Music streaming platforms contain millions of songs, making it difficult
@@ -57,7 +57,7 @@ representing different music styles.
 
 # ================= PROBLEM STATEMENT =================
 
-st.header("🎯 Problem Statement")
+st.header("Problem Statement")
 
 st.write("""
 The objective of this project is to cluster songs based on their audio
@@ -68,7 +68,7 @@ music recommendation systems.
 
 # ================= DATASET INFO =================
 
-st.header("📊 Dataset Information")
+st.header("Dataset Information")
 
 st.write("""
 Dataset Source: **Spotify Tracks Dataset (Kaggle)**
@@ -79,7 +79,7 @@ that describe the musical characteristics of each track.
 
 # ================= FEATURES =================
 
-st.header("🎵 Features Used")
+st.header(" Features Used")
 
 features_table = pd.DataFrame({
 "Feature":[
@@ -103,7 +103,7 @@ st.table(features_table)
 
 # ================= MODEL INFO =================
 
-st.header("🤖 Machine Learning Method")
+st.header("Machine Learning Method")
 
 st.write("""
 The model uses **K-Means Clustering**, an unsupervised learning algorithm.
@@ -121,7 +121,7 @@ Steps followed in the project:
 
 # ================= WORKFLOW =================
 
-st.header("⚙ System Workflow")
+st.header("System Workflow")
 
 st.markdown("""
 Dataset → Data Preprocessing → Feature Scaling → K-Means Clustering  
@@ -132,7 +132,7 @@ st.divider()
 
 # ================= PREDICTION TOOL =================
 
-st.header("🎛 Interactive Music Cluster Predictor")
+st.header(" Interactive Music Cluster Predictor")
 
 st.sidebar.header("Adjust Song Features")
 
